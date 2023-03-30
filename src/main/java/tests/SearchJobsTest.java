@@ -26,7 +26,7 @@ public class SearchJobsTest extends BaseTest {
 		//app.waitForElementToBeVisible(driver.findElement(app.menu.topMenu));
 		app.explicitWaitFor(app.menu.topMenu);
 		app.explicitWaitFor(By.cssSelector("h2[class='entry-title']"));
-		driver.findElement(app.menu.findJobsLink).click();		
+		app.click(app.menu.findJobsLink);		
 		app.jobs.findJobs("Test Engineer");
 		app.click(app.jobs.getSelectedJob("Test Engineer at KeyTest"));
 		assertTrue(app.getElement(app.selectedJobs.applyButton).isDisplayed());
