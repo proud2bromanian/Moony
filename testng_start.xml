@@ -1,0 +1,52 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" parallel="tests" thread-count="1">
+
+    <!--Example Listener so there is no need to call it on each individual methods  -->
+    	<listeners>
+    		<listener class-name = "utils.TestNgListener" />
+    	</listeners>
+
+    <test name="SearchCompaniesTest" >
+
+    <!-- Example Parameters used inside tests methods as test data -->
+    	<parameter name ="searchItem" value="coin" />
+    
+    	
+    	<!-- Parameters used as configuration for the test framework 
+    	 browser : sets the browser on which the tests will run
+    	 appUrl  : sets the application url on which the tests will run
+    	 Both parameters are used in the /utils/BaseTest.class on the <setup> method -->
+    	
+    	<parameter name = "browser" value = "chrome" />
+    	<parameter name = "appUrl" value = "https://moony.ro/" />
+    	
+    	
+        <!-- Example class that is being run by this config file. Path is: package.class -->
+        <classes>
+            <class name="tests.SearchCompaniesTest" ></class>       
+        </classes>
+    </test>
+    <test name="SearchJobsTest" >
+
+    <!-- Example Parameters used inside tests methods as test data -->
+    	<parameter name ="user" value="johnnybravo@key-training.ro" />
+    	<parameter name ="pass" value="johnnybravo@123" />
+    
+    	
+    	<!-- Parameters used as configuration for the test framework 
+    	 browser : sets the browser on which the tests will run
+    	 appUrl  : sets the application url on which the tests will run
+    	 Both parameters are used in the /utils/BaseTest.class on the <setup> method -->
+    	
+    	<parameter name = "browser" value = "chrome" />
+    	<parameter name = "appUrl" value = "https://moony.ro/" />
+    	
+    	
+        <!-- Example class that is being run by this config file. Path is: package.class -->
+        <classes>
+            <class name="tests.SearchJobsTest" ></class>       
+        </classes>
+    </test>
+  
+
+</suite>
