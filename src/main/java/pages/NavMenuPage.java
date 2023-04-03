@@ -20,7 +20,7 @@ public class NavMenuPage extends SeleniumWrappers{
 	//locatori
 	
 	public By loginLink = By.linkText("Login");	
-	public By topMenu = By.xpath("//div[contains(@class, 'container') and div[contains(@class, 'row')]]");
+	public By topMenu = By.cssSelector("header[class='site-header ']");
 	public By findJobsLink = By.xpath("//div[@class='menu-item-wrap']/span[contains(text(), 'Find jobs')]");
 	public By companiesLink = By.linkText("Companies");
 	

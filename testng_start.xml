@@ -6,46 +6,26 @@
     		<listener class-name = "utils.TestNgListener" />
     	</listeners>
 
-    <test name="SearchCompaniesTest" >
+    <test name="MoonyTest" >
 
     <!-- Example Parameters used inside tests methods as test data -->
+    	
+    
+    	
+    	<!-- Parameters used as configuration for the test framework 
+    	 browser : sets the browser on which the tests will run
+    	 appUrl  : sets the application url on which the tests will run
+    	 Both parameters are used in the /utils/BaseTest.class on the <setup> method -->
     	<parameter name ="searchItem" value="coin" />
-    
-    	
-    	<!-- Parameters used as configuration for the test framework 
-    	 browser : sets the browser on which the tests will run
-    	 appUrl  : sets the application url on which the tests will run
-    	 Both parameters are used in the /utils/BaseTest.class on the <setup> method -->
-    	
     	<parameter name = "browser" value = "chrome" />
-    	<parameter name = "appUrl" value = "https://moony.ro/" />
-    	
+    	<parameter name = "appUrl" value = "https://moony.ro/" />   	
     	
         <!-- Example class that is being run by this config file. Path is: package.class -->
         <classes>
-            <class name="tests.SearchCompaniesTest" ></class>       
-        </classes>
-    </test>
-    <test name="SearchJobsTest" >
-
-    <!-- Example Parameters used inside tests methods as test data -->
-    	<parameter name ="user" value="johnnybravo@key-training.ro" />
-    	<parameter name ="pass" value="johnnybravo@123" />
-    
-    	
-    	<!-- Parameters used as configuration for the test framework 
-    	 browser : sets the browser on which the tests will run
-    	 appUrl  : sets the application url on which the tests will run
-    	 Both parameters are used in the /utils/BaseTest.class on the <setup> method -->
-    	
-    	<parameter name = "browser" value = "chrome" />
-    	<parameter name = "appUrl" value = "https://moony.ro/" />
-    	
-    	
-        <!-- Example class that is being run by this config file. Path is: package.class -->
-        <classes>
-            <class name="tests.SearchJobsTest" ></class>       
-        </classes>
+            <class name="tests.SearchCompaniesTest" ></class>      
+             <class name="tests.SearchJobsTest" ></class>    
+        </classes>      
+       
     </test>
   
 

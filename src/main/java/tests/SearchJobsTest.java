@@ -16,16 +16,13 @@ import utils.TestNgListener;
 //@Listeners(TestNgListener.class)
 public class SearchJobsTest extends BaseTest {
 	
-	@Parameters({"user", "pass"})
+	
 	@Test ()
-	public void loginTest(String username, String parola) {
+	public void loginTest() {
 		
 		app.click(app.menu.loginLink);
-		app.loginPage.loginInApp(username, parola);
-		//assertTrue(app.loginPage.loginSucessMessageIsDisplayed());
-		//app.waitForElementToBeVisible(driver.findElement(app.menu.topMenu));
-		app.explicitWaitFor(app.menu.topMenu);
-		app.explicitWaitFor(By.cssSelector("h2[class='entry-title']"));
+		app.loginPage.loginInApp("johnnybravo@key-training.ro", "johnnybravo@123");
+		app.explicitWaitFor(app.menu.topMenu);		
 		app.click(app.menu.findJobsLink);		
 		app.jobs.findJobs("Test Engineer");
 		app.click(app.jobs.getSelectedJob("Test Engineer at KeyTest"));
